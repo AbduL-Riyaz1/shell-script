@@ -17,6 +17,7 @@ then
 else
     echo "installing mysql.....sucess"
 
+
 dnf install git -y
 
 if [ $? -ne 0 ]
