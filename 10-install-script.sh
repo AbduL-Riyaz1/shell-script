@@ -46,13 +46,13 @@ than
     fi
 else
     echo "git is already.......INSTALLED"
-
+fi
 
 
 # if [ $? -ne 0 ]
-#     then
-#         echo "installing git.....FAILURE"
-#         exit 1
-#     else
-#         echo "installing git.....SUCCESS"
-#     fi
+# then
+#     echo "installing git.....FAILURE"
+#     exit 1
+# else
+#     echo "installing git.....SUCCESS"
+# fi
