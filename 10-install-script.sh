@@ -10,6 +10,4 @@ fi
 
 dnf install mysqll -y
 
-if
-
 dnf install git -y
