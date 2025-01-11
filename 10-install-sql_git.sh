@@ -7,4 +7,6 @@ then
     echo "ERROR::You Must Have Sudo Acess To Execute This Script"
 fi
 
-dnf install mysqll -y
+dnf install mysql -y
+
+dnf install git -y
