@@ -18,6 +18,7 @@ if [ $? -ne 0 ] # not installed
     else
         echo "Installing mysql.....SUCCESS"
     fi
+    
 else
     echo "MYSQL is Already.....INSTALLED"
 fi
