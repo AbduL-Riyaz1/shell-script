@@ -25,7 +25,8 @@ else
 fi
 
 dnf list installed git
-f [ $? -ne 0 ]
+
+if [ $? -ne 0 ]
 then
     dnf inatall git -y
     if [ $? -ne 0 ]
