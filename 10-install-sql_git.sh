@@ -32,7 +32,7 @@ fi
 #         echo "Installing mysql.....SUCCESS"
 #     fi
 
-dnf installed git
+dnf list installed git
 
 if [ $? -ne 0 ]
 then
