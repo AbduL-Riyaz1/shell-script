@@ -7,23 +7,49 @@ then
     echo "ERROR::You Must Have Sudo Acess To Execute This Script"
     exit 1
 fi
+dnf list installed mysql
 
-dnf install mysql -y
+if [ $? -ne 0 ] # not installed
+    dnf install mysql -y
+    if [ $? -ne 0 ]
+    then
+        echo "Installing mysql.....FAILED"
+        exit 1
+    else
+        echo "Installing mysql.....SUCCESS"
+    fi
+else
+    echo "MYSQL is Already.....INSTALLED"
+fi
+
+# if [ $? -ne 0 ]
+#     then
+#         echo "Installing mysql.....FAILED"
+#         exit 1
+#     else
+#         echo "Installing mysql.....SUCCESS"
+#     fi
+
+dnf installed git
 
 if [ $? -ne 0 ]
 then
-    echo "Installing mysql.....FAILED"
-    exit 1
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo "Installing git.....FAILED"
+        exit 1
+    else
+        echo "Installing git.....SUCCESS"
+    fi
 else
-    echo "Installing mysql.....SUCCESS"
+    echo "GIT is Already.....INSTALLED"
 fi
 
-dnf install git -y
-
-if [ $? -ne 0 ]
-then
-    echo "Installing git.....FAILED"
-    exit 1
-else
-    echo "Installing git.....SUCCESS"
-fi
+# if [ $? -ne 0 ]
+# then
+#     echo "Installing git.....FAILED"
+#     exit 1
+# else
+#     echo "Installing git.....SUCCESS"
+# fi
