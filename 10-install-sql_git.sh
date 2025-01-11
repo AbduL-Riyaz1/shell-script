@@ -10,19 +10,50 @@ fi
 
 dnf list installed mysql
 
-if [ $? -ne 0 ] 
-then # not installed
-    dnf install mysql -y
+if [ $? -ne 0 ]
+then
+    dnf inatall mysql -y
     if [ $? -ne 0 ]
     then
-        echo "Installing mysql.....FAILED"
+        echo "Installing MYSQL.....Failure"
         exit 1
     else
-        echo "Installing mysql.....SUCCESS"
+        echo "Installing MYSQL....Success"
     fi
 else
-    echo "MYSQL is Already.....INSTALLED"
+    echo "MYSQL is Already.....Installed"
 fi
+
+dnf list installed git
+f [ $? -ne 0 ]
+then
+    dnf inatall git -y
+    if [ $? -ne 0 ]
+    then
+        echo "Installing GIT.....Failure"
+        exit 1
+    else
+        echo "Installing GIT....Success"
+    fi
+else
+    echo "GIT is Already.....Installed"
+fi
+
+# dnf list installed mysql
+
+# if [ $? -ne 0 ] 
+# then # not installed
+#     dnf install mysql -y
+#     if [ $? -ne 0 ]
+#     then
+#         echo "Installing mysql.....FAILED"
+#         exit 1
+#     else
+#         echo "Installing mysql.....SUCCESS"
+#     fi
+# else
+#     echo "MYSQL is Already.....INSTALLED"
+# fi
 
 # if [ $? -ne 0 ]
 #     then
@@ -32,21 +63,21 @@ fi
 #         echo "Installing mysql.....SUCCESS"
 #     fi
 
-dnf list installed git
+# dnf list installed git
 
-if [ $? -ne 0 ]
-then
-    dnf install git -y
-    if [ $? -ne 0 ]
-    then
-        echo "Installing GIT.....FAILED"
-        exit 1
-    else
-        echo "Installing GIT.....SUCCESS"
-    fi
-else
-    echo "GIT is Already.....INSTALLED"
-fi
+# if [ $? -ne 0 ]
+# then
+#     dnf install git -y
+#     if [ $? -ne 0 ]
+#     then
+#         echo "Installing GIT.....FAILED"
+#         exit 1
+#     else
+#         echo "Installing GIT.....SUCCESS"
+#     fi
+# else
+#     echo "GIT is Already.....INSTALLED"
+# fi
 
 # if [ $? -ne 0 ]
 # then
