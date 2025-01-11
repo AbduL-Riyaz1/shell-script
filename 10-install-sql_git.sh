@@ -7,9 +7,11 @@ then
     echo "ERROR::You Must Have Sudo Acess To Execute This Script"
     exit 1
 fi
+
 dnf list installed mysql
 
-if [ $? -ne 0 ] # not installed
+if [ $? -ne 0 ] 
+then # not installed
     dnf install mysql -y
     if [ $? -ne 0 ]
     then
@@ -18,7 +20,6 @@ if [ $? -ne 0 ] # not installed
     else
         echo "Installing mysql.....SUCCESS"
     fi
-    
 else
     echo "MYSQL is Already.....INSTALLED"
 fi
