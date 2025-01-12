@@ -20,7 +20,7 @@ VALIDATE(){
     fi
 }
 
-echo "Script is executeing at $TIMESTAMP" &>> $LOG_FILE
+echo "Script is executeing at $TIMESTAMP" &>> $LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 then 
@@ -28,20 +28,20 @@ then
     exit 1
 fi
 
-dnf list instaled mysql &>> $LOG_FILE
+dnf list instaled mysql &>> $LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 then
-    dnf install mysql -y &>> $LOG_FILE
+    dnf install mysql -y &>> $LOG_FILE_NAME
     VALIDATE $? "INSTALLING MYSQL"
 else
     echo -e "MYSQL is already....$Y INSTALLED $N"
 fi
 
-dnf list installed git &>> $LOG_FILE
+dnf list installed git &>> $LOG_FILE_NAME
 if [ $? -ne 0 ]
 then
-    dnf install git -y &>> $LOG_FILE
+    dnf install git -y &>> $LOG_FILE_NAME
     VALIDATE $? "INSTALLING GIT"
 else
     echo -e "git is already....$Y INSTALLED $N"
