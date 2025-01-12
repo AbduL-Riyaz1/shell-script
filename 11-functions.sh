@@ -3,7 +3,7 @@
 USERID=$(id -u)
 
 VALIDATE(){
-    if [ $1 -ne 0 ]
+    if [ $1 -ne 0 ] #assume $?--->$1,INSTALLING MYQL--->$2
     then
         echo "$2....FAILURE"
         exit 1
