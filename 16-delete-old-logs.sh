@@ -22,14 +22,14 @@ VALIDATE(){
         echo -e "$2 $G....SUCCESS $N"
     fi
 }
-# CHECK_ROOT(){
-#     if [ $USERID -ne 0 ]
-#     then 
-#         echo "You must have sudo access to execute this script"
-#         exit 1
-#     fi
-# }
-# echo "Script is executeing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+CHECK_ROOT(){
+    if [ $USERID -ne 0 ]
+    then 
+        echo "You must have sudo access to execute this script"
+        exit 1
+    fi
+}
+echo "Script is executeing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 FILES_TO_DELETE=(find $SOURCE_DIR -name "*.log" -mtime +14)
 echo "Files to be delated: $FILES_TO_DELETE"
