@@ -2,5 +2,5 @@
 
 while read -r line
 do
-    echo $line
+    echo "$line"
 done < 16-delete-old-logs.sh
