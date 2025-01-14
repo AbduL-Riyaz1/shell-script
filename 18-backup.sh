@@ -8,7 +8,7 @@ N="\e[0m"
 
 SOURCE_DIR=$1
 DESTIN_DIR=$
-DAYS=$(3:-14) #if  user not given days by default ew give 14 days
+DAYS=${3:-14} #if  user not given days by default ew give 14 days
 
 LOGS_FOLDER="/var/log/shellscript.logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
@@ -24,9 +24,9 @@ VALIDATE(){
         echo -e "$2 $G....SUCCESS $N"
     fi
 }
-USAGE()
+USAGE(){
     echo -e "$R USAGE::$N sh 18-backup.sh <SOURCE_DIR> <DESTIN_DIR> <DAYS>"
-
+}
 if [ $# -lt 2 ]
 then
     USAGE
