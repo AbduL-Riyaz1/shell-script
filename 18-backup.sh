@@ -47,5 +47,8 @@ then
     exit 1
 fi
 
-
 echo "Script is executeing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime $DAYS)
+
+echo "files are::$FILES"
