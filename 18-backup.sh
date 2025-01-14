@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 
 SOURCE_DIR=$1
-DESTIN_DIR=$
+DESTIN_DIR=$2
 DAYS=${3:-14} #if  user not given days by default ew give 14 days
 
 LOGS_FOLDER="/home/ec2-user/shellscript.logs/"
