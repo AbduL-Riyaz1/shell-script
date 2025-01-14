@@ -51,4 +51,11 @@ echo "Script is executeing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-echo "files are::$FILES"
+
+
+if [ -n $FILES ]
+then
+    echo "files are::$FILES"
+else
+    echo " $Y No files found older than $DAYS $N"
+fi
