@@ -57,5 +57,5 @@ if [ -n "$FILES" ]
 then
     echo "files are::$FILES"
 else
-    echo -e "$R No files found older than $DAYS $N"
+    echo -e "$R No files found older than $Y $DAYS $N"
 fi
