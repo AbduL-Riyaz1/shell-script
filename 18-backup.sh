@@ -53,9 +53,11 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
 
 
-if [ -n "$FILES" ]
+if [ -n "$FILES" ] #true if there are files to zip
 then
     echo "files are::$FILES"
+    ZIP_FILE="$DESTIN_DIR/app-logs-$TIMESTAMP.zip"
+    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE" 
 else
     echo -e "$R No files found older than $Y $DAYS $N"
 fi
