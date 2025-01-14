@@ -35,4 +35,17 @@ then
     USAGE
 fi
 
+if [ ! -d $SOURCE_DIR ]
+then
+    echo -e "$SOURCE_DIR does not exits $Y.....Please check $N"
+    exit 1
+fi
+
+if [ ! -d $DESTIN_DIR ]
+then
+    echo -e "$DESTIN_DIR does not exits $Y.....Please check $N"
+    exit 1
+fi
+
+
 echo "Script is executeing at: $TIMESTAMP" &>>$LOG_FILE_NAME
