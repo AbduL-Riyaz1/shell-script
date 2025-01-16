@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK_USAGE=(df -hT | grep xfs)
+DISK_USAGE=$(df -hT | grep xfs)
 
 while -r line
 do
