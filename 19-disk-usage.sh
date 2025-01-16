@@ -2,7 +2,7 @@
 
 DISK_USAGE=$(df -hT | grep xfs)
 
-while -r line
+while read -r line
 do
     echo $line
 done <<< $DISK_USAGE
