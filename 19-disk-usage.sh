@@ -11,7 +11,7 @@ do
     #echo "PARTITION: $PARTITION , USAGE: $USAGE"
     if [ $USAGE -ge $DISK_THRESOLD ]
     then
-        MSG="High Disk Usage on Partition : $PARTITION Usage is: $USAGE"
+        MSG+="High Disk Usage on Partition : $PARTITION Usage is: $USAGE"
     fi
 
 done <<< $DISK_USAGE
