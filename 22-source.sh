@@ -3,6 +3,8 @@
 source ./common.sh
 SOURCE_DIR="/home/ec2-user/app-logs"
 
+# taken from 16-delete-old-logs.sh
+
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then 
